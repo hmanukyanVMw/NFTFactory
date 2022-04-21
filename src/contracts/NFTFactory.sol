@@ -1,0 +1,56 @@
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.7.0 <0.9.0;
+
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+contract NFTFactory is ERC721Enumerable, Ownable {
+    string public baseURI;
+    uint256 public cost = 10 wei;
+
+    event Log(address sender, string message);
+    event Received(address caller, uint amount, string message);
+
+    constructor(
+        string memory _name,
+        string memory _token
+    ) ERC721(_name, _token) {
+        emit Log(msg.sender, "constructor has called");
+        baseURI = "ipfs://QmaggY9Pq8CZNN4xRQKRAQKhAvtEzto2ndNXsqotsDyPM3/";
+    }
+
+    fallback() external payable {
+        emit Received(msg.sender, msg.value, "Fallback was called");
+    }
+
+    modifier checkCost() {
+        require(msg.value >= cost, "Min Amount mast be greater then cost");
+        _;
+    }
+
+    function mintFromOwner() public payable checkCost {
+        _safeMint(owner(), totalSupply() + 1);
+    }
+
+    function mint(address _to) public payable checkCost {
+        _safeMint(_to, totalSupply() + 1);
+    }
+
+    function setBaseURI(string memory _newBaseURI) public onlyOwner {
+        baseURI = _newBaseURI;
+    }
+
+    function setCost(uint256 _cost) public onlyOwner {
+        cost = _cost;
+    }
+
+    function _baseURI() internal view virtual override returns (string memory) {
+        return baseURI;
+    }
+
+    function withdraw(uint256 amount) external onlyOwner {
+        (bool os, ) = payable(owner()).call{value: address(this).balance}("");
+        require(os, "Failed withdraw process");
+    }
+
+} 

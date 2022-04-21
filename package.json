@@ -1,0 +1,22 @@
+{
+  "name": "nftfactory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hmanukyanVMw/NFTFactory.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hmanukyanVMw/NFTFactory/issues"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.5.0"
+  },
+  "homepage": "https://github.com/hmanukyanVMw/NFTFactory#readme"
+}
