@@ -28,7 +28,7 @@ function App() {
       // 0x5FbDB2315678afecb367f032d93F642f64180aa3
       // 0x8626f6940e2eb28930efb4cef49b2d1f2c9c1199
       setContract(new ethers.Contract(
-          "0xFFf65AaC5EfCABB291881cF40118d204df1db4A7",
+          Greeter.address,
           Greeter.abi,
           singer
       ))
