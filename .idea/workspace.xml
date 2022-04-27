@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f40af5f9-4881-45ff-a89b-0abfec9a4028" name="Changes" comment="Add fullstack project">
+    <list default="true" id="f40af5f9-4881-45ff-a89b-0abfec9a4028" name="Changes" comment="Add local config">
+      <change afterPath="$PROJECT_DIR$/contracts/NFTFactory.sol" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardhat.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/hardhat.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Token.deployed.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Token.deployed.json" afterDir="false" />
     </list>
@@ -15,7 +17,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Fullstack_WEB_Enviroment_local" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -96,7 +98,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650972710425</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add local config">
+      <created>1651009192087</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651009192087</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add local config">
+      <created>1651009238906</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1651009238906</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,7 +131,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add fullstack project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add fullstack project" />
+    <MESSAGE value="Add local config" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add local config" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  padding: 10px;
 }
 
 .App-logo {
@@ -22,6 +23,18 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.input-amount {
+  width: 10%;
+  height: 32px;
+  font-size: 20px;
+}
+
+.error {
+  font-size: 20px;
+  color: red;
+  padding: 4px;
 }
 
 .App-link {

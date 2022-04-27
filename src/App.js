@@ -1,23 +1,35 @@
 import {ethers} from "ethers"
 import {useEffect, useState} from "react";
+import "./App.css";
 import Greeter from "./artifacts/contracts/Greeter.sol/Greeter.json";
+import NFTFactory from "./artifacts/contracts/NFTFactory.sol/NFTFactory.json";
 // import Greeter from "./Token.deployed.json";
+import NFTFactoryAdd from "./NFTFactory.deployed.json";
 
 
 function App() {
-  const [data, setData] = useState("");
+  const [cost, setCost] = useState("");
+  const [inputValue, setInputValue] = useState("");
   const [contract, setContract] = useState();
+  const [error, setError] = useState("");
 
-  const getData = async () => {
-    debugger;
-    const data = await contract.greet();
-    setData(data);
-  }
+  const mintByOwner = async () => {
+    if (inputValue) {
+      const options = {value: ethers.utils.parseEther(inputValue)}
+      try {
+        const transaction = await contract.mintFromOwner(options);
+        await transaction.wait();
+        setError('');
+      } catch (e) {
+        setError(e.data !== undefined ? e.data.message : e.message);
+        alert(e.data.message);
+      }
+      debugger
 
-  const updateData = async () => {
-    const transaction = await contract.setGreeting(data);
-    await transaction.wait();
-    getData();
+    } else {
+      alert("Fill input value")
+    }
+
   }
 
   const initialConnection = async () => {
@@ -25,41 +37,55 @@ function App() {
       await window.ethereum.request({ method: "eth_requestAccounts"});
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const singer = provider.getSigner();
-      debugger;
-      // 0x5FbDB2315678afecb367f032d93F642f64180aa3
-      // 0x8626f6940e2eb28930efb4cef49b2d1f2c9c1199
-      setContract(new ethers.Contract(
-          "0x5FbDB2315678afecb367f032d93F642f64180aa3",
-          Greeter.abi,
+
+      const contract = new ethers.Contract(
+          NFTFactoryAdd.address,
+          NFTFactory.abi,
           singer
-      ))
+      );
+      const costHexadecimal = await contract.cost();
+      convertAndSetCost(costHexadecimal);
+
+      setContract(contract);
     } else {
       console.log("ssadasdas");
     }
   }
 
-  useEffect(() => {
-    initialConnection()
+  useEffect(  () => {
+    initialConnection();
   }, [])
 
+  const getCost = async () => {
+    const costHexadecimal = await contract.cost();
+    convertAndSetCost(costHexadecimal);
+  }
+
+  const convertAndSetCost = (costHexadecimal) => {
+    const amountByEther = ethers.utils.formatEther(costHexadecimal);
+    setCost(amountByEther);
+  }
+
+  const updateCost = async () => {
+    if (inputValue) {
+      const transactionCost = await contract.setCost(ethers.utils.parseEther(inputValue) );
+      debugger;
+      await transactionCost.wait();
+      await getCost();
+    }
+  }
 
   return (
-    <div  className="App">
-      <button onClick={getData} >Get Data</button>
-      <button onClick={updateData} >set Data</button>
-      <input onChange={e => setData(e.target.value)} placeholder="New Greeting" />
+    <div className="App">
       <header className="App-header">
-        <p>
-          {data}
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p className="error">{error}</p>
+        <input className="input-amount" type="number" onChange={e => setInputValue(e.target.value)}
+               placeholder="amount" />
+        <br/>
+        <button onClick={mintByOwner} >MintByOwner</button>
+        <br/>
+        <button onClick={updateCost} >update Cost</button>
+        <h3>Cost value is a: {cost} Ether</h3>
       </header>
     </div>
   );
