@@ -21,7 +21,7 @@ npx hardhat help
       - deploy Contract and use import NFTFactory from "...(/NFTFactory.json)... 
         this import for creating `new ethers.Contract`
         ```shell
-          node scripts/script.js
+           npx hardhat run scripts/deploy.js --network localhost
         ```
 
         - 2 Running using Remix 
@@ -39,5 +39,5 @@ npx hardhat help
             - deploy Contract and use import NFTFactoryWithAddress from "...(/NFTFactory.deployed.json)...
               this import for creating `new ethers.Contract`
         ```shell
-          node scripts/script.js
+           npx hardhat run scripts/deploy.js --network rinkeby
         ```  
