@@ -25,16 +25,41 @@
   color: white;
 }
 
-.input-amount {
+.inputAmount {
   width: 10%;
   height: 32px;
   font-size: 20px;
+  padding: 6px;
 }
 
-.error {
+.mintForm {
+  display: flex;
+}
+
+.mintForm input {
+  height: 32px;
   font-size: 20px;
-  color: red;
-  padding: 4px;
+  margin-right: 10px;
+  border-radius: 6px;
+  padding: 6px;
+}
+
+.buttonSuccess {
+  width: 100px;
+  font-size: 20px;
+  border-radius: 6px;
+  background-color: #52913c;
+  padding: 6px;
+}
+
+
+.error {
+  width: 80%;
+  color: #a10707;
+  font-size: 20px;
+  max-height: 200px;
+  overflow: scroll;
+  padding: 10px;
 }
 
 .App-link {

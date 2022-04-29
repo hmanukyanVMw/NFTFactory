@@ -1,15 +1,5 @@
 # Basic Sample NFT Factory full stack Project
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/script.js
-npx hardhat help
-```
-
 - How to Run NFTFactory project
   - You can do 2 way.
     - 1 Local running 
@@ -18,18 +8,15 @@ npx hardhat help
         ```shell
           npx hardhat node
         ```
-      - deploy Contract and use import NFTFactory from "...(/NFTFactory.json)... 
-        this import for creating `new ethers.Contract`
+      - deploy Contract 
         ```shell
            npx hardhat run scripts/deploy.js --network localhost
         ```
-
         - 2 Running using Remix 
             - Create account in ALCHEMY, choose Remix option and copy `ALCHEMY_URL`
        
             - In Metamask choose Rinkeby test network and choose one of networks, go to
-              `account details -> Export Private key` copy and past in hardhat config this way  
-              this import for creating `new ethers.Contract`
+              `account details -> Export Private key` copy and past in hardhat config.
               ```shell
                 rinkeby: {
                   url: ALCHEMY_URL,
@@ -41,3 +28,17 @@ npx hardhat help
         ```shell
            npx hardhat run scripts/deploy.js --network rinkeby
         ```  
+
+
+
+
+hardhat useful commands
+```shell
+npx hardhat accounts
+npx hardhat compile
+npx hardhat clean
+npx hardhat test
+npx hardhat node
+node scripts/script.js
+npx hardhat help
+```

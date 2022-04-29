@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract NFTFactory is ERC721Enumerable, Ownable {
     string public baseURI;
-    uint256 public cost = 1 ether;
+    uint256 public cost = 0.01 ether;
 
     event Log(address sender, string message);
     event Received(address caller, uint amount, string message);
@@ -24,7 +24,7 @@ contract NFTFactory is ERC721Enumerable, Ownable {
         _;
     }
 
-    function mintFromOwner() public payable checkCost {
+    function mintForOwner() public payable checkCost onlyOwner {
         _safeMint(owner(), totalSupply() + 1);
     }
 
@@ -44,7 +44,7 @@ contract NFTFactory is ERC721Enumerable, Ownable {
         return baseURI;
     }
 
-    function withdraw(uint256 amount) external onlyOwner {
+    function withdraw() external onlyOwner {
         (bool os, ) = payable(owner()).call{value: address(this).balance}("");
         require(os, "Failed withdraw process");
     }
