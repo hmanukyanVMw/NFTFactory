@@ -18,12 +18,12 @@ function App() {
     if (inputValue) {
       const options = {
         value: ethers.utils.parseEther(inputValue),
-        // from: owner //@TODO when need to send owner address
+        // from: owner //@TODO when need to change owner msg.from address
       }
       try {
         const transaction = isForOwner
             ? await contract.mintForOwner(options)
-            : await contract.mint(senderAddress)
+            : await contract.mint(senderAddress, options)
 
         await transaction.wait();
         setError('');

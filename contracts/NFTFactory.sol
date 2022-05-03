@@ -4,12 +4,15 @@ pragma solidity >=0.7.0 <0.9.0;
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract NFTFactory is ERC721Enumerable, Ownable {
+contract NFTFactory is ERC721Enumerable, Ownable, ReentrancyGuard {
     string public baseURI;
     uint256 public cost = 0.01 ether;
 
+    mapping(address => uint8) private _accountsFreeNFTCount;
+
     event Log(address sender, string message);
     event Received(address caller, uint amount, string message);
+    event Refunded(address sender, uint amount);
 
     constructor(
         string memory _name,
@@ -25,10 +28,23 @@ contract NFTFactory is ERC721Enumerable, Ownable {
     }
 
     function mintForOwner() public payable checkCost onlyOwner {
+        if (_accountsFreeNFTCount[msg.sender] < 10) {
+            ++_accountsFreeNFTCount[msg.sender];
+            (bool success, ) = payable(msg.sender).call{value: msg.value}("");
+
+            require(success, "Failed to Refund ETH");
+            emit Refunded(msg.sender, cost);
+        }
         _safeMint(owner(), totalSupply() + 1);
     }
 
     function mint(address _to) public payable checkCost {
+        if (_accountsFreeNFTCount[msg.sender] < 10) {
+            ++_accountsFreeNFTCount[msg.sender];
+            (bool success, ) = payable(msg.sender).call{value: msg.value}("");
+
+            emit Refunded(msg.sender, cost);
+        }
         _safeMint(_to, totalSupply() + 1);
     }
 
