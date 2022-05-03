@@ -4,7 +4,7 @@ pragma solidity >=0.7.0 <0.9.0;
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract NFTFactory is ERC721Enumerable, Ownable, ReentrancyGuard {
+contract NFTFactory is ERC721Enumerable, Ownable {
     string public baseURI;
     uint256 public cost = 0.01 ether;
 
