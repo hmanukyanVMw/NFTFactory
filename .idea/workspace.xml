@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f40af5f9-4881-45ff-a89b-0abfec9a4028" name="Changes" comment="Add burnable functionality">
+    <list default="true" id="f40af5f9-4881-45ff-a89b-0abfec9a4028" name="Changes" comment="Make some corrections">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contracts/NFTFactory.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/NFTFactory.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +97,7 @@
       <workItem from="1651144543012" duration="1085000" />
       <workItem from="1651229018788" duration="2000" />
       <workItem from="1651253183160" duration="6921000" />
-      <workItem from="1651261850811" duration="14787000" />
+      <workItem from="1651261850811" duration="16246000" />
     </task>
     <task id="LOCAL-00001" summary="Add fullstack project">
       <created>1650972710425</created>
@@ -169,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651564177316</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Make some corrections">
+      <created>1651576980630</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1651576980630</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,7 +201,8 @@
     <MESSAGE value="Add util function for generate JSON for images" />
     <MESSAGE value="implement free 10 token functionality" />
     <MESSAGE value="Add burnable functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add burnable functionality" />
+    <MESSAGE value="Make some corrections" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make some corrections" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
