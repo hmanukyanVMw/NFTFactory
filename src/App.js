@@ -6,24 +6,26 @@ import NFTFactoryWithAddress from "./NFTFactory.deployed.json";
 
 
 function App() {
-  const [owner, setOwner] = useState("");
-  const [balance, setBalance] = useState("");
-  const [cost, setCost] = useState("");
+  const [contractData, setContractData] = useState({
+      owner: '',
+      contract: {},
+      cost: '',
+      balance: '',
+  });
   const [inputValue, setInputValue] = useState("");
   const [senderAddress, setSenderAddress] = useState("");
-  const [contract, setContract] = useState();
   const [error, setError] = useState("");
+
+  const {contract, owner, cost, balance} = contractData;
 
   const mint = async (isForOwner) => {
     if (inputValue) {
       const options = {
         value: ethers.utils.parseEther(inputValue),
         // from: owner //@TODO when need to change owner msg.from address
-      }
+      };
       try {
-        const transaction = isForOwner
-            ? await contract.mintForOwner(options)
-            : await contract.mint(senderAddress, options)
+        const transaction = await contract.mint(isForOwner ? owner : senderAddress, options);
 
         await transaction.wait();
         setError('');
@@ -39,11 +41,11 @@ function App() {
 
   const initialConnection = async () => {
     if (typeof window.ethereum !== "undefined") {
-      const data = await window.ethereum.request({ method: "eth_requestAccounts"});
+      const data = await window.ethereum.request({method: "eth_requestAccounts"});
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const singer = provider.getSigner();
-
       const network = await provider.getNetwork();
+
       let contract;
       if (network.name === "rinkeby") {
         contract = new ethers.Contract(
@@ -59,15 +61,15 @@ function App() {
         );
       }
 
-      setContract(contract);
-      setOwner(data[0]);
-
       const costHexadecimal = await contract.cost();
-      convertAndSetCost(costHexadecimal);
-
       const balance = await provider.getBalance(data[0]);
 
-      setBalance(ethers.utils.formatEther(balance));
+      setContractData({
+        contract,
+        owner: data[0],
+        cost: ethers.utils.formatEther(costHexadecimal),
+        balance: ethers.utils.formatEther(balance),
+      });
     } else {
       console.log("ssadasdas");
     }
@@ -88,11 +90,6 @@ function App() {
       setError(e.data !== undefined ? e.data.message : e.message);
     }
 
-  }
-
-  const convertAndSetCost = (costHexadecimal) => {
-    const amountByEther = ethers.utils.formatEther(costHexadecimal);
-    setCost(amountByEther);
   }
 
   const updateCost = async () => {
