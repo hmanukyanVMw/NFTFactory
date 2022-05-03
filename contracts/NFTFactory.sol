@@ -9,7 +9,7 @@ contract NFTFactory is ERC721Enumerable, Ownable, ERC721Burnable {
     string public baseURI;
     uint256 public cost = 0.01 ether;
 
-    mapping(address => uint8) private _accountsFreeNFTCount;
+    mapping(address => uint8) private _accountsNFTCount;
 
     event Log(address sender, string message);
     event Received(address caller, uint amount, string message);
@@ -23,18 +23,13 @@ contract NFTFactory is ERC721Enumerable, Ownable, ERC721Burnable {
         baseURI = "ipfs://QmaggY9Pq8CZNN4xRQKRAQKhAvtEzto2ndNXsqotsDyPM3/";
     }
 
-    modifier checkCost() {
-        require(msg.value >= cost, "Min Amount mast be greater then cost");
-        _;
-    }
-
-    function mint(address _to) public payable checkCost {
-        if (_accountsFreeNFTCount[msg.sender] < 10) {
-            ++_accountsFreeNFTCount[msg.sender];
-            (bool success, ) = payable(msg.sender).call{value: msg.value}("");
-
-            require(success, 'failed to refund money');
-            emit Refunded(msg.sender, cost);
+    function mint(address _to) public payable {
+        if (_accountsNFTCount[msg.sender] < 10) {
+            ++_accountsNFTCount[msg.sender];
+            require(msg.value == 0, "balance should be 0");
+        } else {
+            ++_accountsNFTCount[msg.sender];
+            require(msg.value >= cost, "Min Amount mast be greater then cost");
         }
         _safeMint(_to, totalSupply() + 1);
     }
@@ -52,7 +47,7 @@ contract NFTFactory is ERC721Enumerable, Ownable, ERC721Burnable {
     }
 
     function withdraw() external onlyOwner {
-        require(address(this).balance > 0, 'balance should be > 0');
+        require(address(this).balance > 0, "balance should be greater 0");
         (bool success, ) = payable(owner()).call{value: address(this).balance}("");
         require(success, "Failed withdraw process");
     }
@@ -67,6 +62,4 @@ contract NFTFactory is ERC721Enumerable, Ownable, ERC721Burnable {
     function supportsInterface(bytes4 interfaceId) public view override(ERC721, ERC721Enumerable) returns (bool) {
         return super.supportsInterface(interfaceId);
     }
-
-
 }
