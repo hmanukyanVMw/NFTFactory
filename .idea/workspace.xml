@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f40af5f9-4881-45ff-a89b-0abfec9a4028" name="Changes" comment="deploy js deploy only NFTFactory smart contract">
+    <list default="true" id="f40af5f9-4881-45ff-a89b-0abfec9a4028" name="Changes" comment="Add max 10 free nft logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contracts/NFTFactory.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/NFTFactory.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +97,7 @@
       <workItem from="1651144543012" duration="1085000" />
       <workItem from="1651229018788" duration="2000" />
       <workItem from="1651253183160" duration="6921000" />
-      <workItem from="1651261850811" duration="19794000" />
+      <workItem from="1651261850811" duration="20641000" />
     </task>
     <task id="LOCAL-00001" summary="Add fullstack project">
       <created>1650972710425</created>
@@ -182,7 +183,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651580575521</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add max 10 free nft logic">
+      <created>1651585599097</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1651585599097</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Add max 10 free nft logic">
+      <created>1651585605924</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1651585605924</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +224,8 @@
     <MESSAGE value="Add burnable functionality" />
     <MESSAGE value="Make some corrections" />
     <MESSAGE value="deploy js deploy only NFTFactory smart contract" />
-    <option name="LAST_COMMIT_MESSAGE" value="deploy js deploy only NFTFactory smart contract" />
+    <MESSAGE value="Add max 10 free nft logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add max 10 free nft logic" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

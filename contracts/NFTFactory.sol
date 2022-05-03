@@ -25,12 +25,11 @@ contract NFTFactory is ERC721Enumerable, Ownable, ERC721Burnable {
 
     function mint(address _to) public payable {
         if (_accountsNFTCount[msg.sender] < 10) {
-            ++_accountsNFTCount[msg.sender];
             require(msg.value == 0, "balance should be 0");
         } else {
-            ++_accountsNFTCount[msg.sender];
-            require(msg.value >= cost, "Min Amount mast be greater then cost");
+            require(msg.value >= cost, "not enough money");
         }
+        ++_accountsNFTCount[msg.sender];
         _safeMint(_to, totalSupply() + 1);
     }
 
