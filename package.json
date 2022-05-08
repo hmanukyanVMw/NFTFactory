@@ -12,13 +12,17 @@
     "dotenv": "^10.0.0",
     "ethereum-waffle": "^3.4.4",
     "hardhat": "^2.9.3",
+    "minimist": "^1.2.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.0"
+    "web-vitals": "^2.1.0",
+    "web3.storage": "^3.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
+    "deploy-dev": "npx hardhat run scripts/deploy.mjs --network localhost",
+    "deploy": "npx hardhat run scripts/deploy.mjs --network rinkeby",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

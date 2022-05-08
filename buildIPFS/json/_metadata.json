@@ -2,7 +2,7 @@
   {
     "name": "Your Collection #1",
     "description": "Remember to replace this description",
-    "image": "ipfs://QmSbPaPQqbHYEs4x5f3rsyxbHBFTYLVf8qJd9HqAuywbyK/1.png",
+    "image": "ipfs://bafybeibkcp2cbixplzgpz6fdlhejrij4jkkttfmdnmmi76p6ib5oigcgw4/images/1.png",
     "dna": "6e82676d9271148253fed8d8509dcbd7191aed93",
     "edition": 1,
     "date": 1650565669844,
@@ -41,7 +41,7 @@
   {
     "name": "Your Collection #2",
     "description": "Remember to replace this description",
-    "image": "ipfs://QmSbPaPQqbHYEs4x5f3rsyxbHBFTYLVf8qJd9HqAuywbyK/2.png",
+    "image": "ipfs://bafybeibkcp2cbixplzgpz6fdlhejrij4jkkttfmdnmmi76p6ib5oigcgw4/images/2.png",
     "dna": "f795dbbebbe18288e2db37c0dcf21e202823d597",
     "edition": 2,
     "date": 1650565669968,
@@ -80,7 +80,7 @@
   {
     "name": "Your Collection #3",
     "description": "Remember to replace this description",
-    "image": "ipfs://QmSbPaPQqbHYEs4x5f3rsyxbHBFTYLVf8qJd9HqAuywbyK/3.png",
+    "image": "ipfs://bafybeibkcp2cbixplzgpz6fdlhejrij4jkkttfmdnmmi76p6ib5oigcgw4/images/3.png",
     "dna": "4d724e7f919daecbd7aebb043d5b076469e98110",
     "edition": 3,
     "date": 1650565670095,
@@ -119,7 +119,7 @@
   {
     "name": "Your Collection #4",
     "description": "Remember to replace this description",
-    "image": "ipfs://QmSbPaPQqbHYEs4x5f3rsyxbHBFTYLVf8qJd9HqAuywbyK/4.png",
+    "image": "ipfs://bafybeibkcp2cbixplzgpz6fdlhejrij4jkkttfmdnmmi76p6ib5oigcgw4/images/4.png",
     "dna": "a636d95ade44e435d6bcc3dce6760c03c05c2970",
     "edition": 4,
     "date": 1650565670212,
@@ -158,7 +158,7 @@
   {
     "name": "Your Collection #5",
     "description": "Remember to replace this description",
-    "image": "ipfs://QmSbPaPQqbHYEs4x5f3rsyxbHBFTYLVf8qJd9HqAuywbyK/5.png",
+    "image": "ipfs://bafybeibkcp2cbixplzgpz6fdlhejrij4jkkttfmdnmmi76p6ib5oigcgw4/images/5.png",
     "dna": "dcaa8f9b70ac82e82624c60f795d3826b39bd3c2",
     "edition": 5,
     "date": 1650565670333,

@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f40af5f9-4881-45ff-a89b-0abfec9a4028" name="Changes" comment="Add max 10 free nft logic">
+    <list default="true" id="f40af5f9-4881-45ff-a89b-0abfec9a4028" name="Changes" comment="PR partly comments fixing">
       <change afterPath="$PROJECT_DIR$/buildIPFS/ERC1155/images/mountain.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/buildIPFS/ERC1155/metadata/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/ipfsJSONGenerator.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/Greeter.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/Greeter.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/NFTFactory.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/NFTFactory.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildIPFS/json/1" beforeDir="false" afterPath="$PROJECT_DIR$/buildIPFS/json/1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildIPFS/json/2" beforeDir="false" afterPath="$PROJECT_DIR$/buildIPFS/json/2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildIPFS/json/3" beforeDir="false" afterPath="$PROJECT_DIR$/buildIPFS/json/3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildIPFS/json/4" beforeDir="false" afterPath="$PROJECT_DIR$/buildIPFS/json/4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildIPFS/json/5" beforeDir="false" afterPath="$PROJECT_DIR$/buildIPFS/json/5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildIPFS/json/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/buildIPFS/json/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/ipfsJSONGenerator.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -103,7 +117,8 @@
       <workItem from="1651229018788" duration="2000" />
       <workItem from="1651253183160" duration="6921000" />
       <workItem from="1651261850811" duration="24289000" />
-      <workItem from="1652002718790" duration="4591000" />
+      <workItem from="1652002718790" duration="6063000" />
+      <workItem from="1652031574771" duration="10905000" />
     </task>
     <task id="LOCAL-00001" summary="Add fullstack project">
       <created>1650972710425</created>
@@ -210,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651586486422</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="PR partly comments fixing">
+      <created>1652026591843</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1652026591843</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +260,8 @@
     <MESSAGE value="Make some corrections" />
     <MESSAGE value="deploy js deploy only NFTFactory smart contract" />
     <MESSAGE value="Add max 10 free nft logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add max 10 free nft logic" />
+    <MESSAGE value="PR partly comments fixing" />
+    <option name="LAST_COMMIT_MESSAGE" value="PR partly comments fixing" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
