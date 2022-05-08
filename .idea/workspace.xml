@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f40af5f9-4881-45ff-a89b-0abfec9a4028" name="Changes" comment="Add max 10 free nft logic">
+      <change afterPath="$PROJECT_DIR$/buildIPFS/ERC1155/images/mountain.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buildIPFS/ERC1155/metadata/metadata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/Greeter.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/Greeter.sol" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contracts/NFTFactory.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/NFTFactory.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +63,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/buildIPFS/ERC1155/images" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -97,7 +102,8 @@
       <workItem from="1651144543012" duration="1085000" />
       <workItem from="1651229018788" duration="2000" />
       <workItem from="1651253183160" duration="6921000" />
-      <workItem from="1651261850811" duration="20641000" />
+      <workItem from="1651261850811" duration="24289000" />
+      <workItem from="1652002718790" duration="4591000" />
     </task>
     <task id="LOCAL-00001" summary="Add fullstack project">
       <created>1650972710425</created>
@@ -197,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651585605924</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Add max 10 free nft logic">
+      <created>1651586486422</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1651586486422</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -71,7 +71,7 @@ function App() {
         balance: ethers.utils.formatEther(balance),
       });
     } else {
-      console.log("ssadasdas");
+      console.log("Your browser does not support metamask. Please use other browser");
     }
   }
 
