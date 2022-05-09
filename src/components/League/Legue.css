@@ -1,0 +1,9 @@
+.commandsList {
+    list-style-type: none;
+    text-decoration: green;
+}
+
+.commandsList > li{
+    list-style-type: none;
+    padding: 10px;
+}

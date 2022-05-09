@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f40af5f9-4881-45ff-a89b-0abfec9a4028" name="Changes" comment="Add ArmenianLeagueTickets.sol contract">
-      <change afterPath="$PROJECT_DIR$/scripts/deploy-ticket.mjs" afterDir="false" />
+    <list default="true" id="f40af5f9-4881-45ff-a89b-0abfec9a4028" name="Changes" comment="Add deploy-ticket">
+      <change afterPath="$PROJECT_DIR$/buildIPFS/ERC1155/images/fa_alashkert.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buildIPFS/ERC1155/images/fa_ararat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buildIPFS/ERC1155/images/fc_ganzasar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buildIPFS/ERC1155/images/fc_lori.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buildIPFS/ERC1155/images/fc_mika.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buildIPFS/ERC1155/images/fc_ulis.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/League/League.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/League/Legue.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Token.deployed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildIPFS/ERC1155/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/buildIPFS/ERC1155/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/ArmenianLeagueTickets.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/ArmenianLeagueTickets.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,7 +288,21 @@
       <option name="project" value="LOCAL" />
       <updated>1652112062911</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Add deploy-ticket">
+      <created>1652112366654</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1652112366654</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Add deploy-ticket">
+      <created>1652112375955</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1652112375955</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,7 +337,8 @@
     <MESSAGE value="Add Error handling on deploy contract" />
     <MESSAGE value="Add metadata ERC11 Genenerator" />
     <MESSAGE value="Add ArmenianLeagueTickets.sol contract" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add ArmenianLeagueTickets.sol contract" />
+    <MESSAGE value="Add deploy-ticket" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add deploy-ticket" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
@@ -12,12 +13,16 @@ contract ArmenianLeagueTickets is ERC1155, Ownable {
     uint public constant ALASHKERT = 3;
     uint public constant ARARAT = 4;
     uint public constant REAL_MADRID = 5;
+    uint public constant GANZASAR = 6;
+    uint public constant LORI = 7;
+    uint public constant MIKA = 8;
+    uint public constant ULIC = 9;
 
     mapping(uint => string) public tokenURI;
 
     constructor() ERC1155("") {
-        name = "ArmenianLeague";
-        symbol = "ArmenianLeague";
+        name = "ArmenianPremierLeague";
+        symbol = "ArmenianPremierLeague";
     }
 
     function mint(address _to, uint _id, uint _amount) external onlyOwner {
