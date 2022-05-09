@@ -13,31 +13,36 @@ const basePath = process.cwd();
 
 
 (async () => {
-  await fs.readFile(`${basePath}/ipfsUrl.txt`, 'utf8', async (err, nftBaseUrl) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-    console.log('nftBaseUrl is: ', nftBaseUrl);
+  try {
+    await fs.readFile(`${basePath}/ipfsUrl.txt`, 'utf8', async (err, nftBaseUrl) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      console.log('nftBaseUrl is: ', nftBaseUrl);
 
 
-    const NFTFactory = await hre.ethers.getContractFactory("NFTFactory");
+      const NFTFactory = await hre.ethers.getContractFactory("NFTFactory");
 
-    const nftFactory = await NFTFactory.deploy(
-      process.env.NFT_FACTORY_NAME,
-      process.env.NFT_FACTORY_SYMBOL,
-      nftBaseUrl
-    );
+      const nftFactory = await NFTFactory.deploy(
+        process.env.NFT_FACTORY_NAME,
+        process.env.NFT_FACTORY_SYMBOL,
+        nftBaseUrl
+      );
 
-    await nftFactory.deployed();
+      await nftFactory.deployed();
 
-    const dataNFTFactory = {
-      address: nftFactory.address,
-      abi: JSON.parse(nftFactory.interface.format('json'))
-    };
-    fs.writeFileSync('./src/NFTFactory.deployed.json', JSON.stringify(dataNFTFactory));
+      const dataNFTFactory = {
+        address: nftFactory.address,
+        abi: JSON.parse(nftFactory.interface.format('json'))
+      };
+      fs.writeFileSync('./src/NFTFactory.deployed.json', JSON.stringify(dataNFTFactory));
 
-    console.log("NFTFactory deployed to:", nftFactory.address);
-  });
+      console.log("NFTFactory deployed to:", nftFactory.address);
+    });
+  } catch (error) {
+    console.error(error);
+    process.exit(1);
+  }
 })();
 
