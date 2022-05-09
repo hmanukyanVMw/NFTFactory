@@ -23,6 +23,8 @@
     "start": "react-scripts start",
     "deploy-dev": "npx hardhat run scripts/deploy.mjs --network localhost",
     "deploy": "npx hardhat run scripts/deploy.mjs --network rinkeby",
+    "ipfs721": "node utils/ipfsJSONGenerator.mjs",
+    "ipfs1155": "node utils/metadataERC1155Generator.mjs",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
