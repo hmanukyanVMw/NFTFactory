@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f40af5f9-4881-45ff-a89b-0abfec9a4028" name="Changes" comment="PR partly comments fixing">
-      <change afterPath="$PROJECT_DIR$/buildIPFS/ERC1155/images/mountain.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildIPFS/ERC1155/metadata/metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/ipfsJSONGenerator.mjs" afterDir="false" />
+    <list default="true" id="f40af5f9-4881-45ff-a89b-0abfec9a4028" name="Changes" comment="Add ArmenianLeagueTickets.sol contract">
+      <change afterPath="$PROJECT_DIR$/scripts/deploy-ticket.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildIPFS/json/1" beforeDir="false" afterPath="$PROJECT_DIR$/buildIPFS/json/1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildIPFS/json/2" beforeDir="false" afterPath="$PROJECT_DIR$/buildIPFS/json/2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildIPFS/json/3" beforeDir="false" afterPath="$PROJECT_DIR$/buildIPFS/json/3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildIPFS/json/4" beforeDir="false" afterPath="$PROJECT_DIR$/buildIPFS/json/4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildIPFS/json/5" beforeDir="false" afterPath="$PROJECT_DIR$/buildIPFS/json/5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildIPFS/json/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/buildIPFS/json/_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/ipfsJSONGenerator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Token.deployed.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +15,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Solidity Contract" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -32,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="MONIT_1_ADD_SIMPLE_NFT_FACTORY" />
+        <entry key="$PROJECT_DIR$" value="Integrate_NFT_Factory" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -64,7 +55,7 @@
     <property name="go.format.on.save.advertiser.fired" value="true" />
     <property name="go.formatter.settings.were.checked" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/buildIPFS/images" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
@@ -74,15 +65,19 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/buildIPFS/images" />
+      <recent name="$PROJECT_DIR$/buildIPFS/ERC1155/images" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/buildIPFS/ERC1155/images" />
       <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/components/NFTFactory" />
+      <recent name="$PROJECT_DIR$/buildIPFS/ERC1155/metadata" />
+      <recent name="$PROJECT_DIR$/buildIPFS/ERC1155/images" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.ipfs721">
     <configuration name="Greeter.Should return the new greeting once it's changed" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -97,8 +92,19 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="ipfs721" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="ipfs721" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.ipfs721" />
         <item itemvalue="Jest.Greeter.Should return the new greeting once it's changed" />
         <item itemvalue="Jest.Greeter.Should return the new greeting once it's changed" />
       </list>
@@ -118,7 +124,7 @@
       <workItem from="1651253183160" duration="6921000" />
       <workItem from="1651261850811" duration="24289000" />
       <workItem from="1652002718790" duration="6063000" />
-      <workItem from="1652031574771" duration="10905000" />
+      <workItem from="1652031574771" duration="18735000" />
     </task>
     <task id="LOCAL-00001" summary="Add fullstack project">
       <created>1650972710425</created>
@@ -232,7 +238,49 @@
       <option name="project" value="LOCAL" />
       <updated>1652026591843</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add generate JSON and image IPFS automation">
+      <created>1652045220554</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1652045220554</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Remove unused Greeter.sol contract">
+      <created>1652046736933</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1652046736933</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Remove unused go.mod file">
+      <created>1652100788101</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1652100788101</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Add Error handling on deploy contract">
+      <created>1652101310966</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1652101310966</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Add metadata ERC11 Genenerator">
+      <created>1652112041676</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1652112041676</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Add ArmenianLeagueTickets.sol contract">
+      <created>1652112062911</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1652112062911</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,9 +309,46 @@
     <MESSAGE value="deploy js deploy only NFTFactory smart contract" />
     <MESSAGE value="Add max 10 free nft logic" />
     <MESSAGE value="PR partly comments fixing" />
-    <option name="LAST_COMMIT_MESSAGE" value="PR partly comments fixing" />
+    <MESSAGE value="Add generate JSON and image IPFS automation" />
+    <MESSAGE value="Remove unused Greeter.sol contract" />
+    <MESSAGE value="Remove unused go.mod file" />
+    <MESSAGE value="Add Error handling on deploy contract" />
+    <MESSAGE value="Add metadata ERC11 Genenerator" />
+    <MESSAGE value="Add ArmenianLeagueTickets.sol contract" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add ArmenianLeagueTickets.sol contract" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/utils/ipfsJSONGenerator.mjs</url>
+          <line>46</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/utils/ipfsJSONGenerator.mjs</url>
+          <line>52</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/utils/ipfsJSONGenerator.mjs</url>
+          <line>65</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/utils/ipfsJSONGenerator.mjs</url>
+          <line>66</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/utils/ipfsJSONGenerator.mjs</url>
+          <line>44</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
