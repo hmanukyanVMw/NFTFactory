@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f40af5f9-4881-45ff-a89b-0abfec9a4028" name="Changes" comment="Add deploy-ticket">
-      <change afterPath="$PROJECT_DIR$/buildIPFS/ERC1155/images/fa_alashkert.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildIPFS/ERC1155/images/fa_ararat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildIPFS/ERC1155/images/fc_ganzasar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildIPFS/ERC1155/images/fc_lori.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildIPFS/ERC1155/images/fc_mika.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildIPFS/ERC1155/images/fc_ulis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/League/League.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/League/Legue.css" afterDir="false" />
+    <list default="true" id="f40af5f9-4881-45ff-a89b-0abfec9a4028" name="Changes" comment="Add all necessory data">
+      <change afterPath="$PROJECT_DIR$/contracts/MyUSDToken.sol" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildIPFS/ERC1155/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/buildIPFS/ERC1155/_metadata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contracts/ArmenianLeagueTickets.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/ArmenianLeagueTickets.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardhat.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/hardhat.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/deploy-ticket.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy-ticket.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Solidity Contract" />
         <option value="JavaScript File" />
+        <option value="Solidity Contract" />
       </list>
     </option>
   </component>
@@ -85,7 +80,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.ipfs721">
+  <component name="RunManager" selected="npm.deploy-ticket">
     <configuration name="Greeter.Should return the new greeting once it's changed" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -100,6 +95,16 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="deploy-ticket" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy-ticket" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="ipfs721" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -112,6 +117,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.deploy-ticket" />
         <item itemvalue="npm.ipfs721" />
         <item itemvalue="Jest.Greeter.Should return the new greeting once it's changed" />
         <item itemvalue="Jest.Greeter.Should return the new greeting once it's changed" />
@@ -133,6 +139,9 @@
       <workItem from="1651261850811" duration="24289000" />
       <workItem from="1652002718790" duration="6063000" />
       <workItem from="1652031574771" duration="18735000" />
+      <workItem from="1652165901299" duration="1388000" />
+      <workItem from="1652204119516" duration="519000" />
+      <workItem from="1652272511398" duration="3381000" />
     </task>
     <task id="LOCAL-00001" summary="Add fullstack project">
       <created>1650972710425</created>
@@ -302,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652112375955</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Add all necessory data">
+      <created>1652134478436</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1652134478436</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +354,8 @@
     <MESSAGE value="Add metadata ERC11 Genenerator" />
     <MESSAGE value="Add ArmenianLeagueTickets.sol contract" />
     <MESSAGE value="Add deploy-ticket" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add deploy-ticket" />
+    <MESSAGE value="Add all necessory data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add all necessory data" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -370,6 +387,11 @@
           <url>file://$PROJECT_DIR$/utils/ipfsJSONGenerator.mjs</url>
           <line>44</line>
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/App.js</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
