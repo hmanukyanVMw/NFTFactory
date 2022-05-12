@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@nomiclabs/hardhat-etherscan": "^3.0.3",
     "@nomiclabs/hardhat-waffle": "^2.0.3",
@@ -22,9 +23,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "deploy-dev": "npx hardhat run scripts/deploy.mjs --network localhost",
-    "deploy": "npx hardhat run scripts/deploy.mjs --network rinkeby",
-    "deploy-ticket": "npx hardhat run scripts/deploy-ticket.mjs --network rinkeby",
+    "deploy-nft": "npx hardhat run scripts/deploy.mjs --network rinkeby",
+    "deploy-nft-dev": "npx hardhat run scripts/deploy.mjs --network localhost",
+    "deploy": "npx hardhat run scripts/deploy-ticket.mjs --network rinkeby",
+    "deploy-dev": "npx hardhat run scripts/deploy-ticket-dev.mjs --network localhost",
     "ipfs721": "node utils/ipfsJSONGenerator.mjs",
     "ipfs1155": "node utils/metadataERC1155Generator.mjs",
     "build": "react-scripts build",
