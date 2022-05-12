@@ -17,6 +17,9 @@ const basePath = process.cwd();
       console.log('ArmenianLeagueTickets is: ', baseURLLeague);
       const ArmenianLeagueTickets = await hre.ethers.getContractFactory("ArmenianLeagueTickets");
 
+      // const MyUSDToken = await hre.ethers.getContractFactory("MyUSDToken");
+      // const myUSDToken = await MyUSDToken.deploy(); //uncomment when need to update MyUSDToken contract
+      const TokenOFUSDToken = "0x9639FC02d13E9AfC67177aC78424628cfFFDa9e8";
       const armenianLeagueTickets = await ArmenianLeagueTickets.deploy();
 
       await armenianLeagueTickets.deployed();

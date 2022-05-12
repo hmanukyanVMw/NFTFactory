@@ -8,16 +8,17 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract ArmenianLeagueTickets is ERC1155, Ownable {
     string public name;
     string public symbol;
-    uint public constant SHIRAK = 0;
-    uint public constant BANANC = 1;
-    uint public constant PYUNIC = 2;
-    uint public constant ALASHKERT = 3;
-    uint public constant ARARAT = 4;
-    uint public constant REAL_MADRID = 5;
-    uint public constant GANZASAR = 6;
-    uint public constant LORI = 7;
-    uint public constant MIKA = 8;
-    uint public constant ULIC = 9;
+    uint256 public cost = 0.01 ether;
+    uint private constant SHIRAK = 0;
+    uint private constant BANANC = 1;
+    uint private constant PYUNIC = 2;
+    uint private constant ALASHKERT = 3;
+    uint private constant ARARAT = 4;
+    uint private constant REAL_MADRID = 5;
+    uint private constant GANZASAR = 6;
+    uint private constant LORI = 7;
+    uint private constant MIKA = 8;
+    uint private constant ULIC = 9;
 
     mapping(uint => string) public tokenURI;
 
@@ -26,7 +27,15 @@ contract ArmenianLeagueTickets is ERC1155, Ownable {
         symbol = "ArmenianPremierLeague";
     }
 
-    function mint(address _to, uint _id, uint _amount) external onlyOwner {
+    modifier checkCost() {
+        require(msg.value == cost, "amount should be equal cost");
+        _;
+    }
+
+    function mint(address _to, uint _id, uint _amount) external payable checkCost  {
+        if (_id < SHIRAK || _id > ULIC) {
+            require(false, "Wrong team parameter");
+        }
         _mint(_to, _id, _amount, "");
     }
 
@@ -54,5 +63,11 @@ contract ArmenianLeagueTickets is ERC1155, Ownable {
 
     function uri(uint _id) public override view returns (string memory) {
         return tokenURI[_id];
+    }
+
+    function withdraw() external {
+        require(address(this).balance > 0, "address balance should be greater 0");
+        (bool success, ) = payable(owner()).call{value: address(this).balance}("");
+        require(success, "Failed withdraw money");
     }
 }

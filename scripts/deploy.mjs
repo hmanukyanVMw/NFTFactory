@@ -21,7 +21,6 @@ const basePath = process.cwd();
       }
       console.log('nftBaseUrl is: ', nftBaseUrl);
 
-
       const NFTFactory = await hre.ethers.getContractFactory("NFTFactory");
 
       const nftFactory = await NFTFactory.deploy(
